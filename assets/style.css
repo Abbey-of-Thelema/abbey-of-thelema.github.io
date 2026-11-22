@@ -127,3 +127,4 @@ h3.era{margin-top:30px}
 .welcome .fine b{color:var(--gold);font-variant-numeric:tabular-nums;display:inline-block;transition:transform .35s ease,color .35s ease,text-shadow .35s ease}
 .welcome .fine b.tick{transform:scale(1.35);color:#fff7dc;text-shadow:0 0 12px #ffcf6a}
 .welcome:has(#member:target) .pick.guest,.welcome:has(#member:target) .pick.member{opacity:.55}
+@media print{.treebox{break-inside:avoid}svg.tree{max-width:none;width:auto;max-height:8in;margin:0 auto}.entry{break-inside:avoid}}

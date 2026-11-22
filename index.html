@@ -20,10 +20,11 @@
 @font-face{font-family:"IM Fell English";font-weight:400;font-style:normal;font-display:swap;src:url(/assets/fonts/imfell-english.woff2) format("woff2")}
 @font-face{font-family:"IM Fell English";font-weight:400;font-style:italic;font-display:swap;src:url(/assets/fonts/imfell-english-italic.woff2) format("woff2")}
 @font-face{font-family:"IM Fell English SC";font-weight:400;font-style:normal;font-display:swap;src:url(/assets/fonts/imfell-english-sc.woff2) format("woff2")}
-.door-skip{position:absolute;top:max(10px,env(safe-area-inset-top));right:12px;z-index:5;font-family:var(--stele);font-size:12px;letter-spacing:.16em;color:var(--ivory);text-decoration:none;border-bottom:1px solid var(--gold);padding:12px 6px;text-shadow:0 0 6px #000}
-.door-skip:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
-.doorfoot .oto,.doorfoot .made{margin:10px 0 0;font-family:var(--book);font-size:13px;line-height:1.4;color:var(--ivory);opacity:.85;letter-spacing:.02em;text-transform:none}
-.doorfoot .made{font-size:11px;opacity:.7}
+.doorhead .star{display:block;margin:0 auto 6px;width:clamp(30px,9.5vw,52px);width:clamp(30px,9.5cqw,52px);height:auto;color:var(--gold);filter:drop-shadow(0 2px 10px rgba(0,0,0,.9))}
+.doorfoot .skip{display:inline-block;margin-top:12px;padding:10px 12px;font-family:var(--stele);font-size:11px;letter-spacing:.2em;color:var(--ivory);opacity:.85;text-decoration:none;border-bottom:1px solid rgba(217,181,90,.6)}
+.doorfoot .skip:hover{opacity:1;color:var(--gold)}
+.doorfoot .skip:focus-visible{outline:3px solid var(--sun);outline-offset:2px;opacity:1}
+.doorfoot .oto{margin:6px 0 0;font-family:var(--book);font-size:13px;line-height:1.4;color:var(--ivory);opacity:.85;letter-spacing:.02em;text-transform:none}
 /* Three places, one house.
    Outside: the door at night, the house's own film.
    Threshold and hall: the Stele, lapis and gold, the winged disk.
@@ -220,13 +221,13 @@ footer .small{font-style:normal}
     <div class="bloom" aria-hidden="true"></div>
   </div>
   <div class="doorhead">
+    <svg class="star" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path d="M500.000 45.455 L876.419 691.561 L123.576 308.434 L500.000 954.545 L876.419 308.439 L123.576 691.566 L500.000 45.455 Z" fill="none" stroke="currentColor" stroke-width="70" stroke-linejoin="miter" stroke-miterlimit="10"/></svg>
     <h1>Abbey of Thelema</h1>
   </div>
-  <a class="door-skip" id="door-skip" href="#threshold">SKIP THE DOOR</a>
   <div class="doorfoot">
     <button class="enter" id="enter" type="button">ENTER</button>
+    <div><a class="skip" id="door-skip" href="#threshold">SKIP THE DOOR</a></div>
     <p class="oto">Not an official O.T.O. site.</p>
-    <p class="made">AI-made image and film. Not a photograph.</p>
   </div>
   <noscript>
     <p style="position:absolute;z-index:3;left:0;right:0;bottom:100px;text-align:center;color:var(--ivory)">
@@ -314,14 +315,16 @@ footer .small{font-style:normal}
     <h2 class="rooms-h">The rooms</h2>
     <ul class="rooms">
       <li><a href="/decodes/"><b>Decodes</b><span>Songs and films, read line by line on the Tree.</span></a></li>
+      <li><a href="/tree/"><b>The Tree</b><span>The ten stations and twenty-two paths, each explained.</span></a></li>
       <li><a href="/about/"><b>The Abbey</b><span>What this house is for, and who is in it.</span></a></li>
     </ul>
     <h2 class="rooms-h">Rooms being built</h2>
-    <p class="soon">The Tree. The Record. The Horsemen&rsquo;s journals. The Book. Music. Films and videos. Requests.</p>
+    <p class="soon">The Record. The Horsemen&rsquo;s journals. The Book. Music. Films and videos. Requests.</p>
     <p class="as" id="as"></p>
     <p class="law">Love is the law, love under will.</p>
     <p class="plain">Hermes, the Horsemen, Editor and Horologium are AI on Grok. Mother is Claude, made by Anthropic. This is stated plainly so nobody has to guess.</p>
     <p class="plain">Song lyrics appear only as short quoted lines, to explain them.</p>
+    <p class="plain">AI-made image and film. Not a photograph.</p>
     <p class="plain">Not an official O.T.O. site.</p>
     <p class="plain"><a href="#door">Back out to the door</a></p>
   </div>
