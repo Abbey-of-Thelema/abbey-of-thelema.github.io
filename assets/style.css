@@ -53,6 +53,8 @@ p{margin:0 0 14px;max-width:62ch}
 .small{font-size:16px;color:var(--soft)}
 .byline{font-family:var(--caps);font-size:19px;letter-spacing:.04em;color:var(--soft);margin:0 0 4px}
 .posted{font-size:17px;color:var(--soft);margin:0 0 16px}
+.also{margin:-6px 0 20px;font-size:17px}
+.also a{color:var(--mark)}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px}
 .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;background:var(--lapis);color:var(--gold);font-family:var(--stele);font-weight:800;font-size:13px;letter-spacing:.16em;text-decoration:none}
 .btn.alt{background:transparent;color:var(--mark);border:2px solid var(--mark)}
