@@ -46,6 +46,7 @@ body.climb{margin:0;background:#07060a;color:#efe6cc;font-family:var(--book);tex
 .shelf .n{font-family:var(--stele);font-weight:700;font-size:13px;letter-spacing:.08em;color:var(--gold);text-align:right}
 .shelf .book{display:flex;flex-direction:column;gap:2px;min-width:0}
 .shelf .book a{color:#f6e7b8;text-decoration:underline;text-underline-offset:3px;line-height:1.35}
+.shelf .book .title{color:#f6e7b8;line-height:1.35}
 .shelf .by,.shelf .note{font-size:16px;line-height:1.4;color:#cfc7b0}
 
 
