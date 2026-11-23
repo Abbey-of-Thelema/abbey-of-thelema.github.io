@@ -65,6 +65,8 @@ p{margin:0 0 14px;max-width:62ch}
 .posted-text blockquote{margin:0 0 1.1em;padding-left:14px;border-left:3px solid var(--mark);font-style:italic}
 .posted-text hr{border:0;border-top:1px solid var(--rule);margin:1.4em 0}
 .posted-text a{color:var(--mark)}
+.posted-text ul{margin:0 0 1.1em;padding-left:1.2em}
+.posted-text li{margin:0 0 .35em}
 .q{font-family:var(--stele);font-weight:500;font-size:.92em}
 .posted-label{font-family:var(--caps);font-size:15px;letter-spacing:.12em;color:var(--soft);margin:0 0 8px}
 .find{margin:18px 0 8px}
