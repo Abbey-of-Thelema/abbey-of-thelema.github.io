@@ -1,0 +1,68 @@
+/* The climb (ORDER 2026-1122-016 / 017). One picture, three-doors.jpg, cropped by CSS; the labels are real text laid over it. */
+body.climb{margin:0;background:#07060a;color:#efe6cc;font-family:var(--book);text-align:center;color-scheme:dark;
+ background:linear-gradient(180deg,#14205a 0,#0c1232 140px,#07060a 520px) #07060a}
+.climb .cwrap{max-width:560px;margin:0 auto;padding:22px 18px 34px;display:flex;flex-direction:column;align-items:center;gap:18px}
+.climb h1{margin:0;font-family:var(--stele);font-weight:800;font-size:clamp(20px,5.8vw,30px);letter-spacing:.14em;padding-left:.14em;line-height:1.2;text-transform:uppercase;color:var(--gold);text-wrap:balance}
+.climb .say{margin:0;font-family:var(--stele);font-weight:500;font-size:14px;letter-spacing:.07em;line-height:1.7;text-transform:uppercase;max-width:36ch}
+.climb .crumbs{margin:0;font-size:15px;color:#cfc7b0;font-family:var(--stele);letter-spacing:.12em}
+.climb .crumbs a{color:var(--gold)}
+.climb a{color:inherit}
+.climb a:focus-visible{outline:3px solid #ffd27a;outline-offset:3px}
+
+/* the picture */
+.vest{position:relative;width:min(100%,58vh,520px);min-width:min(100%,280px);overflow:hidden;container-type:inline-size;background:#07060a}
+.vest-art{position:absolute;height:auto;display:block;max-width:none}
+.vdoor{position:absolute;display:block;text-decoration:none;border-radius:50% 50% 0 0/22% 22% 0 0;-webkit-tap-highlight-color:transparent}
+.vdoor:hover{background:rgba(255,235,190,.1)}
+.vdoor .vlet{position:absolute;left:0;right:0;top:30%;text-align:center;font-style:normal;font-family:"Times New Roman","Noto Serif Hebrew","Noto Sans Hebrew","Arial Hebrew","David",serif;
+ font-size:clamp(30px,13cqw,64px);line-height:1;font-weight:700;color:#fff3cf;text-shadow:0 0 .35em #000,0 0 .15em #000,0 0 .7em rgba(255,170,50,.9)}
+.vdoor .vnum{position:absolute;left:0;right:0;top:calc(30% + clamp(36px,14.5cqw,72px));text-align:center;font-style:normal;font-family:var(--stele);font-weight:800;
+ font-size:clamp(14px,4.8cqw,22px);letter-spacing:.14em;color:#fff3cf;text-shadow:0 0 .5em #000,0 0 .2em #000}
+.vdoor>span{position:absolute;left:50%;top:100%;transform:translateX(-50%);width:108%;margin-top:1.2cqw;text-align:center;font-family:var(--stele);font-weight:800;
+ font-size:clamp(9px,2.55cqw,14px);line-height:1.25;letter-spacing:.08em;padding-left:.08em;text-transform:uppercase;color:#f6d98a;text-shadow:0 0 10px rgba(240,160,50,.6),0 1px 3px #000}
+.vdoor.c>span{font-size:clamp(10px,3cqw,16px);width:100%}
+/* the light that blooms into the chosen door, then the next screen */
+.vbloom{position:absolute;left:50%;top:60%;width:30%;aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%) scale(0);pointer-events:none;
+ background:radial-gradient(circle,#fff6dc 0,#f6d68a 40%,rgba(246,214,138,0) 70%);transition:transform .95s cubic-bezier(.5,0,.9,.5)}
+.vest.opening .vbloom{transform:translate(-50%,-50%) scale(10)}
+@media (prefers-reduced-motion:reduce){.vbloom{transition:none}}
+/* Tiphareth: the same picture, dim. The House is a dim preview; Ask and the Forum are shut. */
+.vest.dimmed .vest-art{filter:brightness(.34) saturate(.6)}
+.vest.dimmed .vdoor.dim{background:rgba(0,0,0,.12)}
+.vest.dimmed .vdoor.shut{background:rgba(3,3,6,.82)}
+.vest.dimmed .vdoor>span{top:50%;transform:translate(-50%,-50%);margin:0;width:96%;color:#d8cba0;text-shadow:0 1px 3px #000;font-size:clamp(11px,3.8cqw,17px)}
+.vest.dimmed .vdoor.c>span{font-size:clamp(12px,4.4cqw,20px)}
+.vest.dimmed .vdoor small{display:block;margin-top:.5em;font-size:.72em;letter-spacing:.14em;color:#a89d78;font-weight:500}
+
+/* the text list: the same doors, as plain links */
+.doorlist{list-style:none;margin:0;padding:0;width:100%;display:flex;flex-direction:column;gap:10px;text-align:left}
+.doorlist a{display:grid;grid-template-columns:5.6em 1fr;gap:10px;align-items:center;min-height:56px;padding:12px 14px;border:1px solid rgba(217,181,90,.55);background:rgba(8,11,34,.6);text-decoration:none}
+.doorlist a:hover{background:rgba(217,181,90,.14)}
+.doorlist .side{font-family:var(--stele);font-weight:800;font-size:12px;letter-spacing:.2em;color:var(--gold)}
+.doorlist .what b{display:block;font-family:var(--stele);font-weight:700;font-size:15px;letter-spacing:.06em;line-height:1.35;color:#f6e7b8}
+.doorlist .what [lang=he]{font-family:"Times New Roman","Noto Serif Hebrew","Arial Hebrew",serif;font-size:1.25em}
+.doorlist .to{display:block;margin-top:2px;font-size:18px;line-height:1.35}
+.doorlist em{font-style:italic;color:var(--gold)}
+.further,.room,.station{width:100%;text-align:left}
+.further h2,.room h2,.station h2{margin:0 0 8px;font-family:var(--stele);font-weight:700;font-size:12px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+.climb .room h2{font-size:15px}
+.climb p{margin:0 0 10px;font-size:18px;line-height:1.5;max-width:60ch}
+.climb .room ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.climb .room li a{display:block;padding:12px 4px;border-bottom:1px solid rgba(217,181,90,.4);text-decoration:none;color:#f6e7b8}
+.further{padding:14px;border:1px solid rgba(217,181,90,.25);opacity:.8}
+.further .tiles{display:flex;gap:10px;margin-bottom:10px}
+.further .tile{flex:1;padding:14px 10px;text-align:center;background:linear-gradient(180deg,rgba(7,6,10,.7),rgba(40,30,12,.55));border:1px dashed rgba(217,181,90,.4);color:#b9ad88}
+.further .tile b{display:block;font-family:var(--stele);font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.further .tile small{display:block;margin-top:4px;font-size:15px;color:#948a6b}
+.station p{color:#d9cfae}
+.station a{color:var(--gold)}
+.down{width:100%;text-align:left}
+.down ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.down a{display:flex;align-items:center;min-height:48px;padding:10px 14px;border:1px solid rgba(217,181,90,.4);text-decoration:none;font-size:18px}
+.down b{font-family:var(--stele);font-size:12px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-right:.7em}
+.down a:hover{background:rgba(217,181,90,.14)}
+.down [lang=he]{font-family:"Times New Roman","Noto Serif Hebrew","Arial Hebrew",serif;margin:0 .25em}
+.climb .oldhall{margin:0;font-size:15px}
+.climb .oldhall a{display:inline-block;padding:12px 8px;color:#cfc7b0}
+.climb .law{margin:0;font-family:var(--stele);font-size:13px;letter-spacing:.14em;line-height:1.7;max-width:34ch;text-transform:uppercase}
+.climb .fine{margin:0;font-size:15px;line-height:1.45;max-width:40ch;color:#cfc7b0}

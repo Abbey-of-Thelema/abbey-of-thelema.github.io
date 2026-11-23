@@ -137,3 +137,7 @@ h3.era{margin-top:30px}
 .roomlinks a{color:var(--mark)}
 .hubs{margin:0 0 18px}
 .hubs a{color:var(--mark)}
+
+/* the place line on every decode, artist, film and decodes page (ORDER 1122-016) */
+.place{font-size:16px;color:var(--soft);margin:-6px 0 14px}
+.place a{color:var(--mark)}

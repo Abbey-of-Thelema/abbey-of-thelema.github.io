@@ -232,6 +232,7 @@ footer .small{font-style:normal}
     <p style="position:absolute;z-index:3;left:0;right:0;bottom:100px;text-align:center;color:var(--ivory)">
       The door needs JavaScript to open the film.
       <a href="#threshold" style="color:var(--gold)">Go on as a seeker or an initiate</a>,
+      or <a href="/climb/" style="color:var(--gold)">begin the climb</a>,
       or open <a href="/decodes/" style="color:var(--gold)">the decodes</a>
       or <a href="/about/" style="color:var(--gold)">the Abbey</a>.
     </p>
@@ -313,6 +314,7 @@ footer .small{font-style:normal}
     </a>
     <h2 class="rooms-h">The rooms</h2>
     <ul class="rooms">
+      <li><a href="/climb/"><b>The Climb</b><span>Walk up the Tree one door at a time, from the ground floor.</span></a></li>
       <li><a href="/decodes/"><b>Decodes</b><span>Songs and films, read line by line on the Tree.</span></a></li>
       <li><a href="/tree/"><b>The Tree</b><span>The ten stations and twenty-two paths, each explained.</span></a></li>
       <li><a href="/about/"><b>The Abbey</b><span>What this house is for, and who is in it.</span></a></li>
@@ -349,26 +351,27 @@ Array.prototype.forEach.call(document.querySelectorAll("[data-as]"), function(b)
   b.addEventListener("click", function(){
     asNow = b.getAttribute("data-as");
     try{ localStorage.setItem(KEY, asNow); }catch(e){}
-    location.hash = "hall";
+    to("climb");
   });
 });
 var door = $("view-door"), film = $("film"), flash = $("flash");
 var calm = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
 var busy = false;
+function to(n){ if(n === "climb") location.assign("/climb/"); else location.hash = n; }
 function go(next){
   if(busy) return;
-  if(calm){ location.hash = next; return; }
+  if(calm){ to(next); return; }
   busy = true;
   door.classList.add("opening");
   setTimeout(function(){ flash.classList.add("on"); }, 950);
   setTimeout(function(){
-    location.hash = next;
+    to(next);
     door.classList.remove("opening");
     setTimeout(function(){ flash.classList.remove("on"); busy = false; }, 80);
   }, 1500);
 }
-function enter(){ go(asNow ? "hall" : "threshold"); }
-function skip(e){ if(e) e.preventDefault(); location.hash = asNow ? "hall" : "threshold"; }
+function enter(){ go(asNow ? "climb" : "threshold"); }
+function skip(e){ if(e) e.preventDefault(); to(asNow ? "climb" : "threshold"); }
 $("enter").addEventListener("click", enter);
 $("doorhit").addEventListener("click", enter);
 var sk = $("door-skip"); if(sk) sk.addEventListener("click", skip);
