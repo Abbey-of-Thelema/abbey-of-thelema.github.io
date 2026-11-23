@@ -143,3 +143,12 @@ h3.era{margin-top:30px}
 /* the place line on every decode, artist, film and decodes page (ORDER 1122-016) */
 .place{font-size:16px;color:var(--soft);margin:-6px 0 14px}
 .place a{color:var(--mark)}
+
+/* House pages (ORDER 2026-1123-023 / 026): tables and numbered lists in posted text */
+.posted-text ol{margin:0 0 1.1em;padding-left:1.2em}
+.posted-text,.posted-text li,.posted-text a{overflow-wrap:anywhere}
+.posted-text .table-wrap{overflow-x:auto;max-width:100%;margin:0 0 1.1em;-webkit-overflow-scrolling:touch}
+.posted-text table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:16px;line-height:1.4}
+.posted-text th,.posted-text td{border:1px solid var(--rule);padding:6px 8px;vertical-align:top;text-align:left;overflow-wrap:anywhere}
+.posted-text th{font-family:var(--caps);font-weight:400;letter-spacing:.04em;font-size:15px}
+@media (max-width:380px){.posted-text table{font-size:15px}}
