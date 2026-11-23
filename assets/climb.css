@@ -33,6 +33,21 @@ body.climb{margin:0;background:#07060a;color:#efe6cc;font-family:var(--book);tex
 .vest.dimmed .vdoor>span{top:50%;transform:translate(-50%,-50%);margin:0;width:96%;color:#d8cba0;text-shadow:0 1px 3px #000;font-size:clamp(11px,3.8cqw,17px)}
 .vest.dimmed .vdoor.c>span{font-size:clamp(12px,4.4cqw,20px)}
 .vest.dimmed .vdoor small{display:block;margin-top:.5em;font-size:.72em;letter-spacing:.14em;color:#a89d78;font-weight:500}
+/* Shut doors on Hod and Netzach (ORDER 2026-1123-020): same overlay and type as Tiphareth's shut side doors, on a picture that stays bright. */
+.vdoor.shut{background:rgba(3,3,6,.82);pointer-events:none}
+.vdoor.shut>span{top:50%;transform:translate(-50%,-50%);margin:0;width:96%;color:#d8cba0;text-shadow:0 1px 3px #000;font-size:clamp(11px,3.8cqw,17px)}
+.vdoor.shut small{display:block;margin-top:.5em;font-size:.72em;letter-spacing:.14em;color:#a89d78;font-weight:500}
+.doorlist li.shut .dl{display:grid;grid-template-columns:5.6em 1fr;gap:10px;align-items:center;min-height:56px;padding:12px 14px;border:1px solid rgba(217,181,90,.25);background:rgba(3,3,6,.55);opacity:.8}
+.doorlist li.shut .to em{color:#c4b48a}
+
+/* The Library shelf */
+.shelf{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:0;width:100%}
+.shelf li{display:grid;grid-template-columns:2.2em 1fr;gap:10px;align-items:baseline;padding:11px 0;border-bottom:1px solid rgba(217,181,90,.28);text-align:left}
+.shelf .n{font-family:var(--stele);font-weight:700;font-size:13px;letter-spacing:.08em;color:var(--gold);text-align:right}
+.shelf .book{display:flex;flex-direction:column;gap:2px;min-width:0}
+.shelf .book a{color:#f6e7b8;text-decoration:underline;text-underline-offset:3px;line-height:1.35}
+.shelf .by,.shelf .note{font-size:16px;line-height:1.4;color:#cfc7b0}
+
 
 /* the text list: the same doors, as plain links */
 .doorlist{list-style:none;margin:0;padding:0;width:100%;display:flex;flex-direction:column;gap:10px;text-align:left}
