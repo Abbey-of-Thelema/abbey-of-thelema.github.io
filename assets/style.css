@@ -152,3 +152,11 @@ h3.era{margin-top:30px}
 .posted-text th,.posted-text td{border:1px solid var(--rule);padding:6px 8px;vertical-align:top;text-align:left;overflow-wrap:anywhere}
 .posted-text th{font-family:var(--caps);font-weight:400;letter-spacing:.04em;font-size:15px}
 @media (max-width:380px){.posted-text table{font-size:15px}}
+
+/* Ask (ORDER 2026-1123-031 / PLAN item 61): no-match line on the decodes search, and the Asked-for list */
+.nomatch{margin:0 0 18px;font-size:18px}
+.nomatch a{color:var(--mark)}
+table.asked{width:100%;border-collapse:collapse;table-layout:fixed;font-size:16px;line-height:1.4;margin:0 0 1.1em}
+table.asked th,table.asked td{border:1px solid var(--rule);padding:6px 8px;vertical-align:top;text-align:left;overflow-wrap:anywhere}
+table.asked th{font-family:var(--caps);font-weight:400;letter-spacing:.04em;font-size:15px}
+@media (max-width:380px){table.asked{font-size:15px}}
