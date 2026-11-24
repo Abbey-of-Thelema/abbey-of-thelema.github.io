@@ -349,6 +349,7 @@ footer .small{font-style:normal}
 
 <div id="flash" aria-hidden="true"></div>
 
+<script src="/assets/door-count.js"></script>
 <script>
 (function(){
 "use strict";
@@ -388,7 +389,7 @@ function go(next){
 }
 function enter(){ go("climb"); }
 function skip(e){ if(e) e.preventDefault(); to("climb"); }
-/* ORDER 2026-1123-025 A2: the count waits on his key. This hook does nothing until then; no data leaves the page. */
+/* ORDER 2026-1124-003 A2: window.abbeyCount is defined in /assets/door-count.js. While the Worker URL is empty or the Worker is down, the hook does nothing and the door still opens. */
 window.abbeyCount = window.abbeyCount || function(choice){};
 Array.prototype.forEach.call(document.querySelectorAll("[data-choice]"), function(a){
   a.addEventListener("click", function(e){
