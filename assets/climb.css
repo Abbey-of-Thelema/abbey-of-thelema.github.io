@@ -92,3 +92,8 @@ body.climb{margin:0;background:#07060a;color:#efe6cc;font-family:var(--book);tex
 .gate{background:rgba(3,3,6,.45)}
 .oath-slot h2,.gate h2{margin:0 0 8px;font-family:var(--stele);font-weight:700;font-size:12px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
 .oath-slot p,.gate p{margin:0;overflow-wrap:anywhere}
+
+/* ORDER 2026-1123-034 item 1: links look like links, the way "Read the station on the Tree page" does. */
+.climb .room li a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.climb :where(main p,main li)>a:where(:not([class])){color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.climb .room p.src{font-size:16px;color:#c4b48a}

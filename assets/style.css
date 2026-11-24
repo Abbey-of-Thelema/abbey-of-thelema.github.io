@@ -160,3 +160,7 @@ table.asked{width:100%;border-collapse:collapse;table-layout:fixed;font-size:16p
 table.asked th,table.asked td{border:1px solid var(--rule);padding:6px 8px;vertical-align:top;text-align:left;overflow-wrap:anywhere}
 table.asked th{font-family:var(--caps);font-weight:400;letter-spacing:.04em;font-size:15px}
 @media (max-width:380px){table.asked{font-size:15px}}
+
+/* ORDER 2026-1123-034 item 1: links look like links (underlined, in the link blue); classed links keep their own look. */
+:where(main p,main li,main td,main dd)>a:where(:not([class])){color:var(--mark);text-decoration:underline;text-underline-offset:3px}
+.teach .src,.welcome-long .src{font-size:16px;color:var(--soft)}
