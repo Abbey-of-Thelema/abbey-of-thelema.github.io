@@ -97,3 +97,6 @@ body.climb{margin:0;background:#07060a;color:#efe6cc;font-family:var(--book);tex
 .climb .room li a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .climb :where(main p,main li)>a:where(:not([class])){color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .climb .room p.src{font-size:16px;color:#c4b48a}
+
+/* ORDER 2026-1124-011 */
+.climb .fine a{color:#f3ead0;text-decoration:underline;text-underline-offset:3px}

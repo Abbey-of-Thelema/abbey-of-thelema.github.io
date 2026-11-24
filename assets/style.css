@@ -164,3 +164,36 @@ table.asked th{font-family:var(--caps);font-weight:400;letter-spacing:.04em;font
 /* ORDER 2026-1123-034 item 1: links look like links (underlined, in the link blue); classed links keep their own look. */
 :where(main p,main li,main td,main dd)>a:where(:not([class])){color:var(--mark);text-decoration:underline;text-underline-offset:3px}
 .teach .src,.welcome-long .src{font-size:16px;color:var(--soft)}
+
+/* ORDER 2026-1124-011: footer links, and the Antichrist room as one home for his work */
+footer .small{color:#cfc7b0}
+footer a{color:#f3ead0;text-decoration:underline;text-underline-offset:3px}
+footer .foot-links,footer .foot-contact{margin-bottom:6px}
+.rm{margin:0 0 38px}
+.rm h2{font-family:var(--stele);font-weight:800;font-size:21px;letter-spacing:.12em;text-transform:uppercase;line-height:1.2;margin:0 0 12px;padding-bottom:7px;border-bottom:3px double var(--ink)}
+.rm .src{margin:0 0 12px;font-size:17px;color:var(--soft)}
+.rm-find{list-style:none;margin:0 0 16px;padding:0}
+.rm-find li{display:grid;grid-template-columns:6.2em 1fr;gap:0 12px;padding:10px 0;border-top:1px solid var(--rule);align-items:baseline}
+.rm-find a{color:var(--mark);text-decoration:underline;text-underline-offset:3px}
+.rm-find b{font-family:var(--stele);font-weight:800;font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+.rm-find span{display:block;color:var(--soft);font-size:16px}
+.rm-pic{margin:0 0 6px}
+.rm-pic img{display:block;width:180px;max-width:100%;height:auto;border:1px solid var(--rule)}
+.rm-pic figcaption{font-size:15px;color:var(--soft);margin-top:5px}
+.rm-list{list-style:none;margin:0;padding:0}
+.rm-list li{padding:14px 0;border-top:1px solid var(--rule)}
+.rm-list li>b{display:block;font-size:21px;line-height:1.2;font-weight:700}
+.rm-list .meta{display:block;color:var(--soft);font-size:16px;margin:3px 0 0}
+.rm-list .actions{margin:10px 0 0}
+.rm-vids{list-style:none;margin:0 0 12px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
+.rm-vids a{display:block;text-decoration:none;color:inherit}
+.rm-vids img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--rule);background:var(--lapis)}
+.rm-vids b{display:block;font-size:17px;line-height:1.25;margin-top:6px;font-weight:700}
+.rm-vids a:hover b,.rm-vids a:focus-visible b{text-decoration:underline;text-underline-offset:3px}
+.rm-vids .meta{display:block;font-size:15px;color:var(--soft)}
+@media (min-width:620px){.rm-vids{grid-template-columns:repeat(3,minmax(0,1fr))}}
+details.rm-all{border-top:1px solid var(--rule);padding-top:10px}
+details.rm-all summary{cursor:pointer;font-family:var(--stele);font-weight:800;font-size:15px;letter-spacing:.1em;text-transform:uppercase;padding:6px 0}
+.rm-all ol{margin:10px 0 0;padding-left:0;list-style:none}
+.rm-all li{padding:8px 0;border-top:1px solid var(--rule);font-size:17px;line-height:1.35}
+.rm-all .small{white-space:nowrap}
