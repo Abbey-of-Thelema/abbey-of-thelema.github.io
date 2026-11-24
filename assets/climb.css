@@ -26,7 +26,7 @@ body.climb{margin:0;background:#07060a;color:#efe6cc;font-family:var(--book);tex
  background:radial-gradient(circle,#fff6dc 0,#f6d68a 40%,rgba(246,214,138,0) 70%);transition:transform .95s cubic-bezier(.5,0,.9,.5)}
 .vest.opening .vbloom{transform:translate(-50%,-50%) scale(10)}
 @media (prefers-reduced-motion:reduce){.vbloom{transition:none}}
-/* Tiphareth: the same picture, dim. The House is a dim preview; Ask and the Forum are shut. */
+/* A dimmed vest (the Abyss page): sealed doors use the shut overlay on a dim picture. */
 .vest.dimmed .vest-art{filter:brightness(.34) saturate(.6)}
 .vest.dimmed .vdoor.dim{background:rgba(0,0,0,.12)}
 .vest.dimmed .vdoor.shut{background:rgba(3,3,6,.82)}
@@ -82,3 +82,13 @@ body.climb{margin:0;background:#07060a;color:#efe6cc;font-family:var(--book);tex
 .climb .oldhall a{display:inline-block;padding:12px 8px;color:#cfc7b0}
 .climb .law{margin:0;font-family:var(--stele);font-size:13px;letter-spacing:.14em;line-height:1.7;max-width:34ch;text-transform:uppercase}
 .climb .fine{margin:0;font-size:15px;line-height:1.45;max-width:40ch;color:#cfc7b0}
+
+/* 1123-032: quotes, the oath placeholder, and the closed gate on the Abyss page */
+.room blockquote{margin:0 0 1em;padding:.75em 0 .75em 1em;border-left:2px solid rgba(217,181,90,.55)}
+.room blockquote p{margin:0 0 .6em;overflow-wrap:anywhere}
+.room blockquote p.src,.room .src{margin:0;font-size:16px;color:#c4b48a}
+.oath-slot,.gate{width:100%;text-align:left;margin:0 0 1.1em;padding:14px;border:1px solid rgba(217,181,90,.35)}
+.oath-slot{background:rgba(40,30,12,.35)}
+.gate{background:rgba(3,3,6,.45)}
+.oath-slot h2,.gate h2{margin:0 0 8px;font-family:var(--stele);font-weight:700;font-size:12px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
+.oath-slot p,.gate p{margin:0;overflow-wrap:anywhere}
